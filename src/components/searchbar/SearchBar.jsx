@@ -10,7 +10,7 @@ function SearchBar() {
 
     useEffect(() => {
         fetch(
-            `https://a.nacapi.com/AssetsListP2`
+            `https://api.jsonbin.io/b/622640587caf5d67836199ee`
         )
             .then(response => response.json())
             .then(data => setCards(data))
@@ -59,7 +59,7 @@ function SearchBar() {
                 </form>
             </div>
 
-            {searchTerm != '' && searchDisplay ?
+            {searchTerm !== '' && searchDisplay ?
                     <div className='pop-up'>
                         <div className='animate__animated animate__jackInTheBox'>
                         <div className='pop-up-results'>

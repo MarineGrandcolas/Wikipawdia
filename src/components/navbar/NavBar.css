@@ -82,7 +82,7 @@
         margin-top: 0;
     }
 
-    .Navbar img {
+    .navbar-logo {
         width: 80%;
         position: relative;
         top: 0%;
@@ -144,7 +144,7 @@
         margin-bottom: 42px;
     }
     
-    .Navbar img {
+    .navbar-logo {
         height: 10vw;
         width: 10vw;
         position: relative;
@@ -154,7 +154,6 @@
     }
         
     .title-container{
-        /* display: flex; */
         justify-content: center;
         align-items: center;
         text-decoration: none; 

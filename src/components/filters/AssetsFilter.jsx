@@ -15,7 +15,7 @@ const AssetsFilter = () => {
 
     useEffect(() => {
         fetch(
-            `https://a.nacapi.com/AssetsListP2`
+            `https://api.jsonbin.io/b/622640587caf5d67836199ee`
         )
             .then(response => response.json())
             .then(data => setCards(data))
@@ -73,7 +73,7 @@ const AssetsFilter = () => {
                         <div className="filters-box-main">
                             <p>Ok ! Sur quelle techno ?</p>
                             <div className="buttons-stylized">
-                                {buttons[0][1].map((button) => <button type='button' onClick={(e) => { e.preventDefault(); setTechClicked(`${button}`)}}>{button}</button>)}
+                                {buttons[0][1].map((button, index) => <button type='button' key={index} onClick={(e) => { e.preventDefault(); setTechClicked(`${button}`)}}>{button}</button>)}
                             </div>
                         </div>
                     </div>
@@ -86,7 +86,7 @@ const AssetsFilter = () => {
                         <div className="filters-box-main">
                             <p>Ok! Sur quelle techno ?</p>
                             <div className="buttons-stylized" id="">
-                                {buttons[1][1].map((button) => <button type='button' onClick={(e) => { e.preventDefault(); setTechClicked(`${button}`)}}>{button}</button>)}
+                                {buttons[1][1].map((button, index) => <button type='button' key={index} onClick={(e) => { e.preventDefault(); setTechClicked(`${button}`)}}>{button}</button>)}
                             </div>
                         </div>
                     </div>
@@ -99,7 +99,7 @@ const AssetsFilter = () => {
                         <div className="filters-box-main">
                             <p>Ca marche ! Avec quel format es-tu le plus à l'aise ?</p>
                             <div className="buttons-stylized">
-                                {buttons[2][1].map((button) => <button type='button' onClick={(e) => {e.preventDefault(); setFormatClicked(`${button}`)}}>
+                                {buttons[2][1].map((button, index) => <button type='button' key={index} onClick={(e) => {e.preventDefault(); setFormatClicked(`${button}`)}}>
                                     {button}
                                 </button>)}
                             </div>
@@ -110,9 +110,9 @@ const AssetsFilter = () => {
                 }
                 </div>
                 <div className='filter-results'>
-                    {formatClicked != '' ?
+                    {formatClicked !== '' ?
                         <div>
-                            {filteringCards.length !== 0 ?
+                            {filteringCards.length ?
                                 <div className='display-cards-flex'>
                                     <div className='display-cards-title'>
                                     <h1>Résultats de la chat-sse</h1>

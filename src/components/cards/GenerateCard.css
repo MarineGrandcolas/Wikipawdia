@@ -92,9 +92,9 @@
     width: 150px;
 }
 
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 768px) {
     .GenerateCard {
-        height: 420px;
+        height: 380px;
     }
 
     .flex-cards-visual {

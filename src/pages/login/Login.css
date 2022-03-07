@@ -12,9 +12,8 @@
     flex-direction: column;
     justify-content: space-evenly;
     font-weight: 700;
-    height: 100%;
     overflow: hidden;
-    padding: 30px;
+    padding: 10px 30px;
     width: calc(var(--width)*2);
 }
 
